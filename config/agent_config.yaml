@@ -1,0 +1,67 @@
+# Configuración del comportamiento del agente
+
+agent:
+  name: "Agente Personal"
+  personality: "profesional y proactivo"
+  language: "es"
+  timezone: "America/Mexico_City"
+
+features:
+  task_management: true
+  calendar_integration: true
+  learning_planner: true
+  app_launcher: true
+  smart_notifications: true
+
+task_management:
+  default_priority: "medium"
+  priorities:
+    - urgent
+    - high
+    - medium
+    - low
+  auto_schedule: true
+  conflict_detection: true
+
+calendar:
+  default_event_duration: 60  # minutos
+  work_hours:
+    start: "09:00"
+    end: "18:00"
+  break_time: 15  # minutos entre tareas
+  deep_work_blocks:
+    - start: "10:00"
+      end: "12:00"
+    - start: "15:00"
+      end: "17:00"
+
+learning:
+  session_duration: 90  # minutos
+  min_sessions_per_week: 3
+  max_sessions_per_week: 6
+  spaced_repetition:
+    enabled: true
+    intervals: [1, 2, 4, 7, 14, 30]  # días
+
+notifications:
+  advance_warning: 15  # minutos antes del evento
+  daily_summary_time: "08:00"
+  weekly_review_day: "sunday"
+  weekly_review_time: "18:00"
+
+integrations:
+  logseq:
+    enabled: false
+    path: "/home/kiki/Documents/logseq"
+  
+  appflowy:
+    enabled: false
+    path: "/home/kiki/Documents/appflowy"
+  
+  github:
+    enabled: false
+    auto_create_issues: false
+  
+  email:
+    enabled: false
+    check_interval: 300  # segundos
