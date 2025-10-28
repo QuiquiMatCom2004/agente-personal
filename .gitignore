@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# UV
+.uv/
+
+# Environment
+.env
+*.env
+!.env.example
+
+# Data
+data/logs/*.log
+data/db/*.db
+data/cache/*
+!data/logs/.gitkeep
+!data/db/.gitkeep
+!data/cache/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.egg-info/
