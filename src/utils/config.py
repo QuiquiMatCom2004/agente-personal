@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     )
     notification_sound: bool = Field(default=True, alias="NOTIFICATION_SOUND")
 
+    # Database
+    database_url: str = Field(
+        default="sqlite+aiosqlite:///data/db/tasks.db", alias="DATABASE_URL"
+    )
+
     # Redis
     redis_url: str = Field(default="redis://localhost:6379", alias="REDIS_URL")
     use_redis: bool = Field(default=False, alias="USE_REDIS")
